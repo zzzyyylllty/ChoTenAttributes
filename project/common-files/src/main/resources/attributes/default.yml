@@ -1,0 +1,213 @@
+# Attribute Definitions
+# Each top-level key is the attribute ID (only a-z, 0-9, _ allowed)
+# 属性定义
+# 每个顶层键是属性 ID（仅允许 a-z, 0-9, _）
+#
+# Built-in attributes are registered by code, this file only serves as a reference.
+# Config-defined attributes here will be loaded AFTER builtins and will be SKIPPED
+# if they share an ID with a builtin.
+# 内置属性由代码注册，此文件仅作为参考。
+# 此处通过配置定义的属性将在内置属性之后加载，如果 ID 与内置属性重复则会被跳过。
+
+# ===== Minecraft 原生属性 =====
+
+# max_health:
+#   name: "生命上限"
+#   vanillaName: "max_health"
+#   defaultValue: 20.0
+#   isPercentage: false
+#   description: "Maximum health points"
+
+# max_absorption:
+#   name: "伤害吸收上限"
+#   vanillaName: "max_absorption"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Absorption health"
+
+# movement_speed:
+#   name: "移动速度"
+#   vanillaName: "movement_speed"
+#   defaultValue: 0.1
+#   isPercentage: false
+#   description: "Movement speed"
+
+# attack_damage:
+#   name: "攻击力"
+#   vanillaName: "attack_damage"
+#   defaultValue: 1.0
+#   isPercentage: false
+#   description: "Melee attack base damage"
+
+# attack_speed:
+#   name: "攻击速度"
+#   vanillaName: "attack_speed"
+#   defaultValue: 4.0
+#   isPercentage: false
+#   description: "Attack speed"
+
+# armor:
+#   name: "护甲值"
+#   vanillaName: "armor"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Armor defense"
+
+# armor_toughness:
+#   name: "护甲韧性"
+#   vanillaName: "armor_toughness"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Armor toughness"
+
+# attack_knockback:
+#   name: "攻击击退"
+#   vanillaName: "attack_knockback"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Attack knockback"
+
+# knockback_resistance:
+#   name: "击退抗性"
+#   vanillaName: "knockback_resistance"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Knockback resistance"
+
+# luck:
+#   name: "幸运"
+#   vanillaName: "luck"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Luck"
+
+# fall_damage_multiplier:
+#   name: "跌落伤害倍率"
+#   vanillaName: "fall_damage_multiplier"
+#   defaultValue: 1.0
+#   isPercentage: false
+#   description: "Fall damage multiplier"
+
+# burning_time:
+#   name: "燃烧时间"
+#   vanillaName: "burning_time"
+#   defaultValue: 1.0
+#   isPercentage: false
+#   description: "Burning time multiplier"
+
+# explosion_knockback_resistance:
+#   name: "爆炸击退抗性"
+#   vanillaName: "explosion_knockback_resistance"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Explosion knockback resistance"
+
+# mining_efficiency:
+#   name: "挖掘效率"
+#   vanillaName: "mining_efficiency"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Mining efficiency"
+
+# movement_efficiency:
+#   name: "移动效率"
+#   vanillaName: "movement_efficiency"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Movement efficiency"
+
+# oxygen_bonus:
+#   name: "氧气加成"
+#   vanillaName: "oxygen_bonus"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Oxygen bonus"
+
+# player_block_break_speed:
+#   name: "方块破坏速度"
+#   vanillaName: "player_block_break_speed"
+#   defaultValue: 1.0
+#   isPercentage: false
+#   description: "Block break speed"
+
+# player_block_interaction_range:
+#   name: "方块交互距离"
+#   vanillaName: "player_block_interaction_range"
+#   defaultValue: 4.5
+#   isPercentage: false
+#   description: "Block interaction range"
+
+# player_entity_interaction_range:
+#   name: "实体交互距离"
+#   vanillaName: "player_entity_interaction_range"
+#   defaultValue: 3.0
+#   isPercentage: false
+#   description: "Entity interaction range"
+
+# player_submerged_mining_speed:
+#   name: "水下挖掘速度"
+#   vanillaName: "player_submerged_mining_speed"
+#   defaultValue: 0.2
+#   isPercentage: false
+#   description: "Submerged mining speed"
+
+# player_mining_speed:
+#   name: "挖掘速度"
+#   vanillaName: "player_mining_speed"
+#   defaultValue: 1.0
+#   isPercentage: false
+#   description: "Mining speed"
+
+# gravity:
+#   name: "重力"
+#   vanillaName: "gravity"
+#   defaultValue: 0.08
+#   isPercentage: false
+#   description: "Gravity"
+
+# safe_fall_distance:
+#   name: "安全跌落距离"
+#   vanillaName: "safe_fall_distance"
+#   defaultValue: 3.0
+#   isPercentage: false
+#   description: "Safe fall distance"
+
+# scale:
+#   name: "缩放"
+#   vanillaName: "scale"
+#   defaultValue: 1.0
+#   isPercentage: false
+#   description: "Entity scale"
+
+# step_height:
+#   name: "台阶高度"
+#   vanillaName: "step_height"
+#   defaultValue: 0.6
+#   isPercentage: false
+#   description: "Step height"
+
+# spawn_reinforcements:
+#   name: "僵尸增援概率"
+#   vanillaName: "spawn_reinforcements"
+#   defaultValue: 0.0
+#   isPercentage: false
+#   description: "Zombie reinforcement chance"
+
+# ===== 自定义扩展属性 (示例，已注释) =====
+
+# custom_crit:
+#   name: "暴击率"
+#   vanillaName: null
+#   defaultValue: 0.0
+#   minValue: 0.0       # 最小值（可选，不填则无下限）
+#   maxValue: 100.0     # 最大值（可选，不填则无上限）
+#   isPercentage: true
+#   description: "Critical hit chance"
+#   icon: "DIAMOND_SWORD"
+
+# ===== 攻击类型属性 (新增内置属性，无需在此定义) =====
+# 以下属性已通过代码注册，此处仅作为参考
+# ranged_attack_damage: 远程攻击伤害加成 (百分比)
+# magic_attack_damage: 魔法攻击伤害加成 (百分比)
+# fire_attack_damage: 火焰攻击伤害加成 (百分比)
+# fire_attack_chance: 火焰攻击几率 (百分比，使攻击有一定几率附加火焰效果)

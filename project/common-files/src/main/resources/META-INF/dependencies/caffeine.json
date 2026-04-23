@@ -1,0 +1,17 @@
+[
+  {
+    "value": "com.github.ben-manes.caffeine:caffeine:$caffeineVersion",
+    "relocate": [
+      "com.github.benmanes.caffeine",
+      "io.github.zzzyyylllty.attribute.dep.caffeine"
+    ],
+    "transitive": true,
+    "ignoreOptional": false,
+    "ignoreException": false,
+    "scopes": [
+      "compile",
+      "runtime"
+    ],
+    "external": true
+  }
+]

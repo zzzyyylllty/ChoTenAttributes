@@ -1,0 +1,51 @@
+package io.github.zzzyyylllty.attribute.function.javascript
+
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.title.Title
+import net.kyori.adventure.title.Title.Times.times
+import org.bukkit.entity.Player
+import org.bukkit.potion.PotionEffect
+import org.bukkit.potion.PotionEffectType
+import taboolib.common.platform.function.submit
+import java.time.Duration
+
+object PlayerUtil {
+    fun addPotionEffect(player: Player, type: String, duration: Int = 30, amplifier: Int = 0, ambient: Boolean = true, particles: Boolean = true, icon: Boolean = true) {
+        submit {
+            player.addPotionEffect(
+                PotionEffect(
+                    PotionEffectType.getByName(type)!!,
+                    duration,
+                    amplifier,
+                    ambient,
+                    particles,
+                    icon
+                )
+            )
+        }
+    }
+    fun addPotionEffect(player: Player, type: String, duration: Int = 30, amplifier: Int = 0) {
+        submit {
+            player.addPotionEffect(
+                PotionEffect(
+                    PotionEffectType.getByName(type)!!,
+                    duration,
+                    amplifier
+                )
+            )
+        }
+    }
+    fun removePotionEffect(player: Player, type: String) {
+        submit {
+            player.removePotionEffect(
+                PotionEffectType.getByName(type)!!
+            )
+        }
+    }
+    fun showTitle(player: Player, title: Component, subTitle: Component, durationIn: Int = 30, duration: Int = 30, durationOut: Int = 30) {
+        val fadeIn = Duration.ofMillis(durationIn.toLong() * 50) // Convert ticks to milliseconds
+        val stay = Duration.ofMillis(duration.toLong() * 50)
+        val fadeOut = Duration.ofMillis(durationOut.toLong() * 50)
+        player.showTitle(Title.title(title, subTitle, times(fadeIn, stay, fadeOut)))
+    }
+}

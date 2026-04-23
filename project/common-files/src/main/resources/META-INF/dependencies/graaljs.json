@@ -1,0 +1,89 @@
+[
+  {
+    "value": "org.graalvm.polyglot:polyglot:$graaljsVersion",
+    "test": [
+      "org.graalvm.polyglot.Context"
+    ],
+    "transitive": true,
+    "ignoreOptional": false,
+    "ignoreException": false,
+    "scopes": [
+      "compile",
+      "runtime"
+    ],
+    "relocate": [],
+    "external": true
+  },
+  {
+    "value": "org.graalvm.truffle:truffle-enterprise:$graaljsVersion",
+    "test": [
+      "com.oracle.truffle.polyglot.enterprise.EnterprisePolyglotImpl"
+    ],
+    "transitive": true,
+    "ignoreOptional": false,
+    "ignoreException": false,
+    "scopes": [
+      "compile",
+      "runtime"
+    ],
+    "external": true
+  },
+  {
+    "value": "org.graalvm.truffle:truffle-api:$graaljsVersion",
+    "test": [
+      "org.graalvm.truffle.api.TruffleLanguage"
+    ],
+    "transitive": true,
+    "ignoreOptional": false,
+    "ignoreException": false,
+    "scopes": [
+      "compile",
+      "runtime"
+    ],
+    "relocate": [],
+    "external": true
+  },
+  {
+    "value": "org.graalvm.truffle:truffle-runtime:$graaljsVersion",
+    "test": [],
+    "transitive": true,
+    "ignoreOptional": false,
+    "ignoreException": false,
+    "scopes": [
+      "compile",
+      "runtime"
+    ],
+    "relocate": [],
+    "external": true
+  },
+  {
+    "value": "org.graalvm.js:js-language:$graaljsVersion",
+    "transitive": true,
+    "test": [
+      "com.oracle.truffle.js.lang.JavaScriptLanguageProvider"
+    ],
+    "ignoreOptional": false,
+    "ignoreException": false,
+    "scopes": [
+      "compile",
+      "runtime"
+    ],
+    "relocate": [],
+    "external": true
+  },
+  {
+    "value": "org.graalvm.sdk:graal-sdk:$graaljsVersion",
+    "test": [
+      "org.graalvm.polyglot.Engine"
+    ],
+    "transitive": true,
+    "ignoreOptional": false,
+    "ignoreException": false,
+    "scopes": [
+      "compile",
+      "runtime"
+    ],
+    "relocate": [],
+    "external": true
+  }
+]

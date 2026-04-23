@@ -1,0 +1,25 @@
+# attribute Configuration
+# 大部分设置需要重启以应用更改
+# MOST SETTINGS REQUIRED RESTART TO APPLY CHANGES
+# 大部分设置需要重启以应用更改
+# MOST SETTINGS REQUIRED RESTART TO APPLY CHANGES
+# 大部分设置需要重启以应用更改
+# MOST SETTINGS REQUIRED RESTART TO APPLY CHANGES
+# 大部分设置需要重启以应用更改
+# MOST SETTINGS REQUIRED RESTART TO APPLY CHANGES
+
+# 调试模式 debug
+# Debug mode
+debug: false
+
+# 语言 language
+lang: en_US
+
+# 基本值属性配置
+basic-attributes:
+  stamina:
+
+    default:
+      min: 0
+      max: 100
+      regeneration: 1
