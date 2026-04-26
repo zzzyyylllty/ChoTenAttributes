@@ -1,5 +1,7 @@
 package io.github.zzzyyylllty.attribute.listener
 
+import io.github.zzzyyylllty.attribute.ChoTenAttributes
+import io.github.zzzyyylllty.attribute.logger.sendStringAsComponent
 import io.github.zzzyyylllty.attribute.manager.AttributeManager
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.entity.*
@@ -8,6 +10,7 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.potion.PotionEffectType
 import taboolib.common.platform.event.EventPriority
 import taboolib.common.platform.event.SubscribeEvent
+import taboolib.platform.util.asLangText
 import kotlin.random.Random
 
 /**
@@ -213,7 +216,30 @@ object AttackListener {
         // 确保伤害不为负数
         modifiedDamage = modifiedDamage.coerceAtLeast(0.0)
 
-        // 7. 更新伤害值
+        // 7. 闪避与格挡判定（受害者）
+        if (victim is Player) {
+            val bdEnabled = ChoTenAttributes.config.getBoolean("block-dodge-settings.enabled", true)
+            if (bdEnabled) {
+                // 闪避判定：完全取消伤害
+                val dodgeChance = AttributeManager.getAttributeValue(victim, "dodge_chance")
+                if (dodgeChance > 0 && Random.nextDouble() < dodgeChance) {
+                    modifiedDamage = 0.0
+                    victim.sendStringAsComponent(victim.asLangText("Dodge_Triggered"))
+                } else {
+                    // 格挡判定：抵消部分伤害
+                    val blockChance = AttributeManager.getAttributeValue(victim, "block_chance")
+                    if (blockChance > 0 && Random.nextDouble() < blockChance) {
+                        val blockDefense = AttributeManager.getAttributeValue(victim, "block_defense")
+                        val blockDefensePercent = AttributeManager.getAttributeValue(victim, "block_defense_percent")
+                        val blocked = blockDefense + modifiedDamage * blockDefensePercent
+                        modifiedDamage = (modifiedDamage - blocked).coerceAtLeast(0.0)
+                        victim.sendStringAsComponent(victim.asLangText("Block_Triggered"))
+                    }
+                }
+            }
+        }
+
+        // 8. 更新伤害值
         if (modifiedDamage != originalDamage) {
             event.damage = modifiedDamage
         }

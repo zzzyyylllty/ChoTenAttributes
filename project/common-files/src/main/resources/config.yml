@@ -15,6 +15,11 @@ debug: false
 # 语言 language
 lang: en_US
 
+# 格挡闪避设置
+block-dodge-settings:
+  # 是否启用格挡与闪避系统
+  enabled: true
+
 # 基本值属性配置
 basic-attributes:
   stamina:

@@ -150,6 +150,10 @@ object AttributeManager {
             AttributeType("crit_damage", "暴击伤害", null, 0.0, isPercentage = true),
             AttributeType("lifesteal", "生命偷取", null, 0.0, isPercentage = true),
             AttributeType("dodge_chance", "闪避率", null, 0.0, isPercentage = true),
+            // 格挡相关属性
+            AttributeType("block_chance", "格挡概率", null, 0.0, isPercentage = true),
+            AttributeType("block_defense", "格挡防御", null, 0.0, isPercentage = false),
+            AttributeType("block_defense_percent", "格挡防御百分比", null, 0.0, isPercentage = true),
             // 新增攻击类型属性
             AttributeType("ranged_attack_damage", "远程攻击伤害", null, 0.0, isPercentage = true),
             AttributeType("magic_attack_damage", "魔法攻击伤害", null, 0.0, isPercentage = true),

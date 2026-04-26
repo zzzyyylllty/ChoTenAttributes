@@ -4,7 +4,7 @@
 
 ChoTen Attribute management system service (Liminal Skyline v4.0 Service)
 
-不是很好用的属性库，因开服迫切使用了部分Claude，暂无时间优化。
+不是很好用的属性库，因开服迫切使用了部分Claude Code，暂无时间优化。
 
 ## As dependency
 

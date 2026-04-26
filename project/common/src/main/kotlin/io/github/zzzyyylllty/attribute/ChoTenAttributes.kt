@@ -41,7 +41,7 @@ object ChoTenAttributes : Plugin() {
     var enabled = false
     var allowAsyncLog = true
 
-    var devMode = true
+    var devMode = false
 
     fun api(): ChoTenAttributeAPI = _api!!
 
@@ -78,6 +78,11 @@ object ChoTenAttributes : Plugin() {
         AttributeManager.loadBasicAttributes()
         AttributeManager.startRegenerationTask()
         registerPlaceholderExpansion()
+    }
+
+    override fun onDisable() {
+
+        enabled = false
     }
 
     private fun registerPlaceholderExpansion() {
